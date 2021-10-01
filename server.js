@@ -39,5 +39,5 @@ function addData(req, res) {
 app.get("/getData", getData);
 
 function getData(req, res) {
-  res.send(projectData).status(200).end();
+  res.send(projectData);
 }

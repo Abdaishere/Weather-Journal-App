@@ -38,9 +38,7 @@ const postData = async function (data) {
 };
 
 const findByCityZipCode = async function (cityZipCode) {
-  let data = await fetch(APIURL + cityZipCode + APIKey);
-  data = data.json();
-  return data;
+  return await (await fetch(APIURL + cityZipCode + APIKey)).json();
 };
 
 const updateUI = async function () {
